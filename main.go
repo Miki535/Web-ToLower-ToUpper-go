@@ -10,7 +10,9 @@ func main() {
 
 	r.LoadHTMLGlob("templates/*")
 
-	r.GET("/", func(c *gin.Context) {})
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(200, "index.html", gin.H{})
+	})
 
 	r.GET("/tolower", func(c *gin.Context) {
 		c.HTML(200, "tolower.html", gin.H{})
