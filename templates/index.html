@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToInfo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="splash-screen" class="text-center">
+    <h1>ToInfo</h1>
+</div>
+<div id="main-content" class="text-center" style="opacity: 0;">
+    <div>
+        <h1>ToInfo</h1>
+        <p>Hello! It`s open-source string converter!</p>
+        <a class="btn btn-dark rounded-pill px-3" type="button" href="/toupper">ToUpper</a>
+        <a class="btn btn-dark rounded-pill px-3" type="button" href="/tolower">ToLower</a>
+    </div>
+</div>
+<style>
+    .text-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        color: #000;
+        background-color: #fff;
+        text-align: center;
+        transition: opacity 2s ease-in-out;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #splash-screen {
+        opacity: 1;
+    }
+
+    #main-content {
+        display: flex;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Показати splash screen на 2 секунди а потім плавно перейти до основного контенту
+        setTimeout(function() {
+            document.getElementById('splash-screen').style.opacity = '0';
+            setTimeout(function() {
+                document.getElementById('splash-screen').style.display = 'none';
+                document.getElementById('main-content').style.opacity = '1';
+            }, 2000);
+        }, 2000);
+    });
+</script>
+</body>
+</html>
