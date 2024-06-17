@@ -13,11 +13,16 @@
             <form action="/tolower" method="post">
                 <label>Enter information:</label>
                 <br>
-                <input type="text" required>
+                <input type="text" name="info" id="info" required>
                 <br> <br>
                 <a class="btn btn-secondary rounded-pill px-3" type="button" href="/">Home</a>
                 <button type="submit" class="btn btn-dark rounded-pill px-3">Submit</button>
                 <button type="reset" class="btn btn-secondary rounded-pill px-3">Reset</button>
+                <br>
+                {{if.}}
+                <h3>Result:</h3>
+                {{.result}}
+                {{end}}
             </form>
         </div>
     </div>
